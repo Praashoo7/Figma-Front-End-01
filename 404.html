@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="icon" href="imgs/404.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection{
+            background-color: rgb(110, 192, 106, 0.5);
+        }
+
+        body{
+            height: 100dvh;
+            padding: 1em;
+            background-color: var(--bg-color);
+        }
+
+        .notFoundMain{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            gap: 1em;
+        }
+        .notFoundCard{
+            position: relative;
+            max-width: 1000px;
+            max-height: 400px;
+            aspect-ratio: 16/9;
+            border-radius: 35px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-color-opacity);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            overflow: hidden;
+        }
+        /* .notFoundCard::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(244, 240, 229, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        } */
+        .notFoundText{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Fredoka;
+            color: var(--text-color);
+            font-size: 2.5em;
+            text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+        }
+        .notFoundCard img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .backToHome{
+            padding: 1em;
+            border-radius: 10px;
+            background-color: var(--button-bg);
+            font-family: Fredoka;
+            color: white;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .backToHome:hover{
+            background-color: #14AA00;
+        }
+        
+        :root {
+            --bg-color: #f4f0e5;
+            --bg-color-opacity: rgb(255, 153, 0, 0.25);
+            --text-color: #353535;
+            --border-color: #925F26;
+            --button-bg: #984500;
+            --main-title: #171717;
+        }
+        [data-theme="dark"] {
+            --bg-color: #0B0F1A;
+            --bg-color-opacity: rgb(28, 30, 36, 0.25);
+            --text-color: #707070;
+            --border-color: #00050F;
+            --button-bg: #001C39;
+            --main-title: #6EC06A /* #8AC887 */;
+        }
+
+        @media screen and (max-width: 425px) {
+            .notFoundText{
+                font-size: 1em;
+            }
+            .notFoundCard{
+                border-radius: 20px;
+            }
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="notFoundMain">
+        <div class="notFoundCard">
+            <div class="notFoundText">404<br>Not Found</div>
+            <img id="mainBG" src="imgs/404Main_L.png" />
+        </div>
+        <div class="backToHome" onclick="window.location='index.html'">Back to Home</div>
+    </div>
+
+    <label style="display: none;" class="theme-switch-second" for="checkboxsecond" id="themeswitch-second">
+        <input type="checkbox" id="checkboxsecond">
+        <div class="slider-second round-second"></div>
+    </label>
+
+    <script>
+
+        const toggleSwitchsecond = document.querySelector('.theme-switch-second input[type="checkbox"]');
+        const mainBG = document.getElementById("mainBG")
+
+        function bgChangeFade(newSrc){
+            mainBG.style.opacity = 0
+
+            setTimeout(() => {
+                mainBG.src = newSrc
+                mainBG.style.opacity = 1
+            }, 200);
+        }
+
+        toggleSwitchsecond.addEventListener('change', switchTheme, false);
+        function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            bgChangeFade("imgs/404Main_D.png")
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            bgChangeFade("imgs/404Main_L.png")
+        }    
+        }
+        const currentThemeSecond = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+        if (currentThemeSecond) {
+            document.documentElement.setAttribute('data-theme', currentThemeSecond);
+
+            if (currentThemeSecond === 'dark') {
+                toggleSwitchsecond.checked = true;
+                bgChangeFade("imgs/404Main_D.png")
+            }
+            else if (currentThemeSecond === 'light') {
+                bgChangeFade("imgs/404Main_L.png")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
