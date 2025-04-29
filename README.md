@@ -4,6 +4,18 @@ This Repository contains Figma Designs and bsic Front-End code for a dummy Pesti
 
 
 
+
+
+https://github.com/user-attachments/assets/ea214a01-0856-4cbb-9904-ee685e69083f
+
+
+
+https://github.com/user-attachments/assets/8ee47bb6-a1b4-4662-9cbc-516aeb70298e
+
+
+
+
+
 ## Credits
 
   - Fredoka font from [Google Fonts.](https://fonts.google.com/specimen/Fredoka?preview.text=At%20the%20first%20page%20choose%20a%20card%20in%20your%20mind.&query=Fredoka&stroke=Sans+Serif)
