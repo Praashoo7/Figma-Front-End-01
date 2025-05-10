@@ -2,18 +2,7 @@
 
 This Repository contains Figma Designs and basic Front-End code for a dummy Pesticide/Biochem Site.<br>
 
-
-
-
-
-https://github.com/user-attachments/assets/ea214a01-0856-4cbb-9904-ee685e69083f
-
-
-
-https://github.com/user-attachments/assets/8ee47bb6-a1b4-4662-9cbc-516aeb70298e
-
-
-
+https://github.com/user-attachments/assets/86007ea5-fb9d-4e26-a60b-1ac5c9c33dd1
 
 
 ## Credits
