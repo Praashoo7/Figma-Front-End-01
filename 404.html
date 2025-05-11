@@ -128,7 +128,7 @@
     <div class="notFoundMain">
         <div class="notFoundCard">
             <div class="notFoundText">404<br>Not Found</div>
-            <img id="mainBG" src="imgs/404Main_L.png" />
+            <img id="mainBG" src="imgs/404Main_L.webp" />
         </div>
         <div class="backToHome" onclick="window.location='index.html'">Back to Home</div>
     </div>
@@ -157,12 +157,12 @@
         if (e.target.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
-            bgChangeFade("imgs/404Main_D.png")
+            bgChangeFade("imgs/404Main_D.webp")
         }
         else {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
-            bgChangeFade("imgs/404Main_L.png")
+            bgChangeFade("imgs/404Main_L.webp")
         }    
         }
         const currentThemeSecond = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -172,10 +172,10 @@
 
             if (currentThemeSecond === 'dark') {
                 toggleSwitchsecond.checked = true;
-                bgChangeFade("imgs/404Main_D.png")
+                bgChangeFade("imgs/404Main_D.webp")
             }
             else if (currentThemeSecond === 'light') {
-                bgChangeFade("imgs/404Main_L.png")
+                bgChangeFade("imgs/404Main_L.webp")
             }
         }
 
