@@ -2,17 +2,9 @@
 
 This Repository contains Figma Designs and basic Front-End code for a dummy Pesticides/Biochem Website. [Click here to Visit.](https://praashoo7.github.io/Figma-Front-End-01/) Figma prototype [Link.](https://www.figma.com/proto/0qmEglGerkhl45sQ9g64Ca/Figma-Front-End-01?page-id=0%3A1&node-id=2-3171&p=f&viewport=446%2C158%2C0.08&t=KpkTHzXiq51cUTL8-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2%3A3171)<br>
 
-- Home
-
 ![HomeImage](imgs/ReadMe-ImageHomeL.png)
 
 ![HomeImageC](imgs/ReadMe-ImageHomeD.png)<br><br>
-
-- 404 Page!
-
-![404Image](imgs/ReadMe-Image404L.png)
-
-![4040ImageC](imgs/ReadMe-Image404D.png)<br>
 
 
 ## Credits
