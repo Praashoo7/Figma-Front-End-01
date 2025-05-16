@@ -51,28 +51,28 @@ document.getElementById("navButtonsHam").addEventListener('click', () => {
     document.getElementById("overlay").style.display = "block";
     setTimeout(() => {
         document.getElementById("overlay").style.opacity = 1;
-    }, 400);
+    }, 0);
 
     setTimeout(() => {
         document.getElementById("homeHam").style.opacity = 1;
         document.getElementById("homeHam").style.transform = "translateX(0em)"
-    }, 500);
+    }, 100);
     setTimeout(() => {
         document.getElementById("productsHam").style.opacity = 1;
         document.getElementById("productsHam").style.transform = "translateX(0em)"
-    }, 600);
+    }, 200);
     setTimeout(() => {
         document.getElementById("aboutHam").style.opacity = 1;
         document.getElementById("aboutHam").style.transform = "translateX(0em)"
-    }, 700);
+    }, 300);
     setTimeout(() => {
         document.getElementById("contactHam").style.opacity = 1;
         document.getElementById("contactHam").style.transform = "translateX(0em)"
-    }, 800);
+    }, 400);
     setTimeout(() => {
         document.getElementById("themeHam").style.opacity = 1;
         document.getElementById("themeHam").style.transform = "translateX(0em)"
-    }, 900);
+    }, 500);
 })
 document.getElementById("cross").addEventListener('click', () => {
 
