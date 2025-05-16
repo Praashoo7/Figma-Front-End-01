@@ -843,6 +843,64 @@ li:hover{
     object-fit: cover;
 }
 
+.starOnGitHub{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  margin: 0 1em 1em 0;
+  z-index: 5;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.starOnGitHub.active{
+  opacity: 1;
+  animation: 1s colorPop ease-in-out;
+}
+@keyframes colorPop {
+  0%{
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+  50%{
+    background-color: limegreen;
+    border: 1px solid rgb(30, 255, 0, 0.5);
+    color: white;
+  }
+  100%{
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+}
+.starOnGitHub:hover{
+  scale: 1.025;
+  background-color: limegreen;
+  border: 1px solid rgb(30, 255, 0, 0.5);
+  color: white;
+}
+.starOnGitHub svg{
+  width: 20px;
+  height: 20px;
+  stroke: black;
+  transition: all 0.2s ease-in-out;
+}
+.starOnGitHub:hover svg{
+  stroke: white;
+}
+
 @media screen and (max-width: 900px) {
     .footerMain{
         flex-direction: column;
@@ -1174,6 +1232,9 @@ li:hover{
     .reviewTree img{
         height: 20%;
         margin-right: -2em;
+    }
+    .starOnGitHub{
+      padding: 0.75em;
     }
 }
 

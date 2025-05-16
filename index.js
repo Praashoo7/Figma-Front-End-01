@@ -97,6 +97,31 @@ document.getElementById("cross").addEventListener('click', () => {
 })
 
 
+/* GITHUB-STAR-SLIDE-IN */
+
+const slideDiv = document.getElementById('starOnGitHub');
+
+function isAtPageBottom() {
+  return window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+}
+
+let shown = false;
+
+window.addEventListener('scroll', () => {
+  if (isAtPageBottom()) {
+    if (!shown) {
+      slideDiv.classList.add('active');
+      shown = true;
+    }
+  } else {
+    if (shown) {
+      slideDiv.classList.remove('active');
+      shown = false;
+    }
+  }
+});
+
+
 /* VIDEO-SCROLL */
 
 const container = document.getElementById("videoWrapper")
