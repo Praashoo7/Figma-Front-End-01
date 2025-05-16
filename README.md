@@ -4,7 +4,7 @@ This Repository contains Figma Designs and basic Front-End code for a dummy Pest
 
 ![HomeImage](imgs/ReadMe-ImageHomeL.png)
 
-![HomeImageC](imgs/ReadMe-ImageHomeD.png)<br><br>
+![HomeImageC](imgs/ReadMe-ImageHomeD.png)<br>
 
 
 ## Credits
