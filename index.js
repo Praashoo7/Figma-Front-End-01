@@ -124,26 +124,26 @@ window.addEventListener('scroll', () => {
 
 /* VIDEO-SCROLL */
 
-const container = document.getElementById("videoWrapper")
-const iframes = document.querySelectorAll("iframe")
-const total = iframes.length
-let currentIndex = 0
+// const container = document.getElementById("videoWrapper")
+// const iframes = document.querySelectorAll("iframe")
+// const total = iframes.length
+// let currentIndex = 0
 
-const iframeStyle = getComputedStyle(iframes[0])
-const iframeWidth = iframes[0].offsetWidth
-const gap = parseFloat(iframeStyle.marginRight || "0")
-const totalWidth = iframeWidth + gap
+// const iframeStyle = getComputedStyle(iframes[0])
+// const iframeWidth = iframes[0].offsetWidth
+// const gap = parseFloat(iframeStyle.marginRight || "0")
+// const totalWidth = iframeWidth + gap
 
-function scrollToIndex(index){
-    container.scrollTo({ left : totalWidth * index, behavior: "smooth" })
-}
+// function scrollToIndex(index){
+//     container.scrollTo({ left : totalWidth * index, behavior: "smooth" })
+// }
 
-document.getElementById("moveLeft").addEventListener('click', () => {
-    currentIndex = ( currentIndex - 1 + total ) % total;
-    scrollToIndex(currentIndex)
-})
+// document.getElementById("moveLeft").addEventListener('click', () => {
+//     currentIndex = ( currentIndex - 1 + total ) % total;
+//     scrollToIndex(currentIndex)
+// })
 
-document.getElementById("moveRight").addEventListener('click', () => {
-    currentIndex = ( currentIndex + 1 ) % total;
-    scrollToIndex(currentIndex)
-})
+// document.getElementById("moveRight").addEventListener('click', () => {
+//     currentIndex = ( currentIndex + 1 ) % total;
+//     scrollToIndex(currentIndex)
+// })
